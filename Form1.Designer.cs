@@ -87,48 +87,54 @@
             // mArquivoNovo
             // 
             mArquivoNovo.Name = "mArquivoNovo";
-            mArquivoNovo.Size = new Size(171, 26);
+            mArquivoNovo.Size = new Size(180, 26);
             mArquivoNovo.Text = "Novo";
+            mArquivoNovo.Click += mArquivoNovo_Click;
             // 
             // mArquivoNovaJanela
             // 
             mArquivoNovaJanela.Name = "mArquivoNovaJanela";
-            mArquivoNovaJanela.Size = new Size(171, 26);
+            mArquivoNovaJanela.Size = new Size(180, 26);
             mArquivoNovaJanela.Text = "Nova Janela";
+            mArquivoNovaJanela.Click += mArquivoNovaJanela_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(168, 6);
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // mArquivoAbrir
             // 
             mArquivoAbrir.Name = "mArquivoAbrir";
-            mArquivoAbrir.Size = new Size(171, 26);
+            mArquivoAbrir.Size = new Size(180, 26);
             mArquivoAbrir.Text = "Abrir";
+            mArquivoAbrir.Click += mArquivoAbrir_Click;
             // 
             // mArquivoSalvar
             // 
             mArquivoSalvar.Name = "mArquivoSalvar";
-            mArquivoSalvar.Size = new Size(171, 26);
+            mArquivoSalvar.Size = new Size(180, 26);
             mArquivoSalvar.Text = "Salvar";
+            mArquivoSalvar.Click += mArquivoSalvar_Click;
             // 
             // mArquivoSalvarComo
             // 
             mArquivoSalvarComo.Name = "mArquivoSalvarComo";
-            mArquivoSalvarComo.Size = new Size(171, 26);
+            mArquivoSalvarComo.Size = new Size(180, 26);
             mArquivoSalvarComo.Text = "Salvar Como";
+            mArquivoSalvarComo.Click += mArquivoSalvarComo_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(168, 6);
+            toolStripSeparator2.Size = new Size(177, 6);
             // 
             // mArquivoSair
             // 
             mArquivoSair.Name = "mArquivoSair";
-            mArquivoSair.Size = new Size(171, 26);
+            mArquivoSair.Size = new Size(180, 26);
             mArquivoSair.Text = "Sair";
+            mArquivoSair.Click += mArquivoSair_Click;
             // 
             // mEditar
             // 
@@ -140,53 +146,53 @@
             // mEditarDesfazer
             // 
             mEditarDesfazer.Name = "mEditarDesfazer";
-            mEditarDesfazer.Size = new Size(180, 26);
+            mEditarDesfazer.Size = new Size(166, 26);
             mEditarDesfazer.Text = "Desfazer";
             // 
             // mEditarRefazer
             // 
             mEditarRefazer.Name = "mEditarRefazer";
-            mEditarRefazer.Size = new Size(180, 26);
+            mEditarRefazer.Size = new Size(166, 26);
             mEditarRefazer.Text = "Refazer";
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(177, 6);
+            toolStripSeparator3.Size = new Size(163, 6);
             // 
             // mEditarRecortar
             // 
             mEditarRecortar.Name = "mEditarRecortar";
-            mEditarRecortar.Size = new Size(180, 26);
+            mEditarRecortar.Size = new Size(166, 26);
             mEditarRecortar.Text = "Recortar";
             // 
             // mEditarCopiar
             // 
             mEditarCopiar.Name = "mEditarCopiar";
-            mEditarCopiar.Size = new Size(180, 26);
+            mEditarCopiar.Size = new Size(166, 26);
             mEditarCopiar.Text = "Copiar";
             // 
             // mEditarColar
             // 
             mEditarColar.Name = "mEditarColar";
-            mEditarColar.Size = new Size(180, 26);
+            mEditarColar.Size = new Size(166, 26);
             mEditarColar.Text = "Colar";
             // 
             // mEditarExcluir
             // 
             mEditarExcluir.Name = "mEditarExcluir";
-            mEditarExcluir.Size = new Size(180, 26);
+            mEditarExcluir.Size = new Size(166, 26);
             mEditarExcluir.Text = "Excluir";
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(177, 6);
+            toolStripSeparator4.Size = new Size(163, 6);
             // 
             // mEditarDataHora
             // 
             mEditarDataHora.Name = "mEditarDataHora";
-            mEditarDataHora.Size = new Size(180, 26);
+            mEditarDataHora.Size = new Size(166, 26);
             mEditarDataHora.Text = "Data e Hora";
             // 
             // mFormatar
@@ -225,19 +231,19 @@
             // mExibirZoomAmpliar
             // 
             mExibirZoomAmpliar.Name = "mExibirZoomAmpliar";
-            mExibirZoomAmpliar.Size = new Size(180, 26);
+            mExibirZoomAmpliar.Size = new Size(149, 26);
             mExibirZoomAmpliar.Text = "Ampliar";
             // 
             // mExibirZoomReduzir
             // 
             mExibirZoomReduzir.Name = "mExibirZoomReduzir";
-            mExibirZoomReduzir.Size = new Size(180, 26);
+            mExibirZoomReduzir.Size = new Size(149, 26);
             mExibirZoomReduzir.Text = "Reduzir";
             // 
             // mExibirZoomRestaurar
             // 
             mExibirZoomRestaurar.Name = "mExibirZoomRestaurar";
-            mExibirZoomRestaurar.Size = new Size(180, 26);
+            mExibirZoomRestaurar.Size = new Size(149, 26);
             mExibirZoomRestaurar.Text = "Restaurar";
             // 
             // mExibirBarraStatus
@@ -303,7 +309,7 @@
             MainMenuStrip = menuBar;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "EditorTXT";
+            Text = "Editor TXT";
             menuBar.ResumeLayout(false);
             menuBar.PerformLayout();
             statusBar.ResumeLayout(false);
