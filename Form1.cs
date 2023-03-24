@@ -134,8 +134,6 @@ namespace EditorTXT
                 Application.Exit();
             }
         }
-<<<<<<< Updated upstream
-=======
         private void txtConteudo_TextChanged(object sender, EventArgs e)
         {
             mArquivoSalvar.Enabled = true;
@@ -195,12 +193,6 @@ namespace EditorTXT
                 }
             }
         }
->>>>>>> Stashed changes
         #endregion
-
-        private void txtConteudo_TextChanged(object sender, EventArgs e)
-        {
-            mArquivoSalvar.Enabled = true;
-        }
     }
 }
