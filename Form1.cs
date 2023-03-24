@@ -134,6 +134,68 @@ namespace EditorTXT
                 Application.Exit();
             }
         }
+<<<<<<< Updated upstream
+=======
+        private void txtConteudo_TextChanged(object sender, EventArgs e)
+        {
+            mArquivoSalvar.Enabled = true;
+        }
+        #endregion
+
+        #region Menu Editar                     
+
+        private void mEditarDesfazer_Click(object sender, EventArgs e)
+        {
+            txtConteudo.Undo();
+        }
+
+        private void mEditarRefazer_Click(object sender, EventArgs e)
+        {
+            txtConteudo.Redo();
+        }
+
+        private void mEditarRecortar_Click(object sender, EventArgs e)
+        {
+            txtConteudo.Cut();
+        }
+
+        private void mEditarCopiar_Click(object sender, EventArgs e)
+        {
+            txtConteudo.Copy(); 
+        }
+
+        private void mEditarColar_Click(object sender, EventArgs e)
+        {
+            txtConteudo.Paste();
+        }
+
+        private void mEditarExcluir_Click(object sender, EventArgs e)
+        {
+            txtConteudo.Text = txtConteudo.Text.Remove(txtConteudo.SelectionStart, txtConteudo.SelectedText.Length);
+        }
+
+        private void mEditarDataHora_Click(object sender, EventArgs e)
+        {
+            int index = txtConteudo.SelectionStart;
+            string dataHora = DateTime.Now.ToString();
+
+            if (txtConteudo.SelectionStart == txtConteudo.Text.Length)
+            {
+                txtConteudo.Text = txtConteudo.Text + dataHora;
+                txtConteudo.SelectionStart = index + dataHora.Length;
+                return;
+            }
+            string temp = "";
+            for (int i = 0; i < txtConteudo.Text.Length; i++)
+            {
+                if (i == txtConteudo.SelectionStart)
+                {
+                    temp += dataHora;
+                    temp += txtConteudo.Text[i];
+                }
+            }
+        }
+>>>>>>> Stashed changes
         #endregion
 
         private void txtConteudo_TextChanged(object sender, EventArgs e)
