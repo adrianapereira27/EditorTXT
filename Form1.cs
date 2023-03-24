@@ -13,6 +13,8 @@ namespace EditorTXT
         private void mArquivoNovo_Click(object sender, EventArgs e)
         {
             txtConteudo.Clear();
+            mArquivoSalvar.Enabled = true;
+            this.Text = Application.ProductName; // this (opcional) é a Form1
 
         }
         private void mArquivoNovaJanela_Click(object sender, EventArgs e)
@@ -26,10 +28,43 @@ namespace EditorTXT
         }
         private void mArquivoAbrir_Click(object sender, EventArgs e)
         {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "Abrir...";
+            dialog.Filter = "rich text file|*.rtf|texto|*.txt|todos|*.*";
 
+            DialogResult result = dialog.ShowDialog();
+            if (result != DialogResult.Cancel && result != DialogResult.Abort)
+            {
+                if (File.Exists(dialog.FileName))
+                {
+                    FileInfo file = new FileInfo(dialog.FileName);
+                    this.Text = Application.ProductName + " - " + file.Name;  // this (opcional) é a Form1
+
+                    Gerenciador.FolderPath = file.DirectoryName + "\\";
+                    Gerenciador.FileName = file.Name.Remove(file.Name.LastIndexOf(".")); // remove a extensão do arquivo
+                    Gerenciador.FileExt = file.Extension;
+
+                    StreamReader stream = null;
+                    try
+                    {
+                        stream = new StreamReader(file.FullName, true);
+                        txtConteudo.Text = stream.ReadToEnd();
+
+                        mArquivoSalvar.Enabled = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Formato de arquivo não suportado. \n" + ex.Message);
+                    }
+                    finally
+                    {
+                        stream.Close();
+                    }
+                }
+            }
         }
         private void mArquivoSalvar_Click(object sender, EventArgs e)
-        {            
+        {
             if (File.Exists(Gerenciador.FilePath))
             {
                 SalvarArquivo(Gerenciador.FilePath);
@@ -51,7 +86,17 @@ namespace EditorTXT
         }
         private void mArquivoSalvarComo_Click(object sender, EventArgs e)
         {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Title = "Salvar Como...";
+            dialog.Filter = "rich text file|*.rtf|texto|*.txt|todos|*.*";
+            dialog.CheckFileExists = false;
+            dialog.CheckPathExists = true;
 
+            var result = dialog.ShowDialog();
+            if (result != DialogResult.Cancel && result != DialogResult.Abort)
+            {
+                SalvarArquivo(dialog.FileName);
+            }
         }
         private void SalvarArquivo(string path)
         {
@@ -66,10 +111,14 @@ namespace EditorTXT
                 Gerenciador.FolderPath = file.DirectoryName + "\\";
                 Gerenciador.FileName = file.Name.Remove(file.Name.LastIndexOf(".")); // remove a extensão do arquivo
                 Gerenciador.FileExt = file.Extension;
+
+                this.Text = Application.ProductName + " - " + file.Name;  // this (opcional) é a Form1
+
+                mArquivoSalvar.Enabled = false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao salvar: \n" + ex.Message);                
+                MessageBox.Show("Erro ao salvar: \n" + ex.Message);
             }
             finally
             {
@@ -83,8 +132,13 @@ namespace EditorTXT
             if (result == DialogResult.Yes)
             {
                 Application.Exit();
-            }            
+            }
         }
         #endregion
+
+        private void txtConteudo_TextChanged(object sender, EventArgs e)
+        {
+            mArquivoSalvar.Enabled = true;
+        }
     }
 }
