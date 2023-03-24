@@ -191,7 +191,13 @@ namespace EditorTXT
                     temp += dataHora;
                     temp += txtConteudo.Text[i];
                 }
+                else
+                {
+                    temp += txtConteudo.Text[i];
+                }
             }
+            txtConteudo.Text = temp;
+            txtConteudo.SelectionStart = index + dataHora.Length;
         }
         #endregion
     }
