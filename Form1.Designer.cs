@@ -281,12 +281,14 @@
             mAjudaExibirAjuda.Name = "mAjudaExibirAjuda";
             mAjudaExibirAjuda.Size = new Size(214, 26);
             mAjudaExibirAjuda.Text = "Exibir Ajuda";
+            mAjudaExibirAjuda.Click += mAjudaExibirAjuda_Click;
             // 
             // mAjudaSobre
             // 
             mAjudaSobre.Name = "mAjudaSobre";
             mAjudaSobre.Size = new Size(214, 26);
             mAjudaSobre.Text = "Sobre o EditorTXT";
+            mAjudaSobre.Click += mAjudaSobre_Click;
             // 
             // statusBar
             // 

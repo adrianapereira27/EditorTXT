@@ -229,7 +229,7 @@ namespace EditorTXT
             txtConteudo.ZoomFactor += 0.1f;
             AtualizarZoomStatusBar(txtConteudo.ZoomFactor);
         }
-   
+
         private void mExibirZoomReduzir_Click(object sender, EventArgs e)
         {
             txtConteudo.ZoomFactor -= 0.1f;
@@ -251,6 +251,18 @@ namespace EditorTXT
         }
         #endregion
 
+        #region Menu Ajuda
+        private void mAjudaExibirAjuda_Click(object sender, EventArgs e)
+        {
+            FormAjuda f = new FormAjuda();
+            f.Show();
 
+        }
+        private void mAjudaSobre_Click(object sender, EventArgs e)
+        {
+            FormSobre f = new FormSobre();
+            f.Show();
+        }
+        #endregion
     }
 }
