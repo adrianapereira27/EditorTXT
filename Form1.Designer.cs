@@ -243,18 +243,21 @@
             mExibirZoomAmpliar.Name = "mExibirZoomAmpliar";
             mExibirZoomAmpliar.Size = new Size(149, 26);
             mExibirZoomAmpliar.Text = "Ampliar";
+            mExibirZoomAmpliar.Click += mExibirZoomAmpliar_Click;
             // 
             // mExibirZoomReduzir
             // 
             mExibirZoomReduzir.Name = "mExibirZoomReduzir";
             mExibirZoomReduzir.Size = new Size(149, 26);
             mExibirZoomReduzir.Text = "Reduzir";
+            mExibirZoomReduzir.Click += mExibirZoomReduzir_Click;
             // 
             // mExibirZoomRestaurar
             // 
             mExibirZoomRestaurar.Name = "mExibirZoomRestaurar";
             mExibirZoomRestaurar.Size = new Size(149, 26);
             mExibirZoomRestaurar.Text = "Restaurar";
+            mExibirZoomRestaurar.Click += mExibirZoomRestaurar_Click;
             // 
             // mExibirBarraStatus
             // 
@@ -264,6 +267,7 @@
             mExibirBarraStatus.Name = "mExibirBarraStatus";
             mExibirBarraStatus.Size = new Size(188, 26);
             mExibirBarraStatus.Text = "Barra de status";
+            mExibirBarraStatus.Click += mExibirBarraStatus_Click;
             // 
             // mAjuda
             // 

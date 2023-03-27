@@ -209,7 +209,7 @@ namespace EditorTXT
         private void mFormatarFonte_Click(object sender, EventArgs e)
         {
             FontDialog fonte = new FontDialog();
-            fonte.ShowColor = true; 
+            fonte.ShowColor = true;
             fonte.ShowEffects = true;
 
             fonte.Font = txtConteudo.Font;
@@ -222,5 +222,35 @@ namespace EditorTXT
             }
         }
         #endregion
+
+        #region Menu Exibir
+        private void mExibirZoomAmpliar_Click(object sender, EventArgs e)
+        {
+            txtConteudo.ZoomFactor += 0.1f;
+            AtualizarZoomStatusBar(txtConteudo.ZoomFactor);
+        }
+   
+        private void mExibirZoomReduzir_Click(object sender, EventArgs e)
+        {
+            txtConteudo.ZoomFactor -= 0.1f;
+            AtualizarZoomStatusBar(txtConteudo.ZoomFactor);
+        }
+
+        private void mExibirZoomRestaurar_Click(object sender, EventArgs e)
+        {
+            txtConteudo.ZoomFactor = 1f;
+            AtualizarZoomStatusBar(txtConteudo.ZoomFactor);
+        }
+        private void mExibirBarraStatus_Click(object sender, EventArgs e)
+        {
+            statusBar.Visible = mExibirBarraStatus.Checked;
+        }
+        private void AtualizarZoomStatusBar(float zoom)
+        {
+            statusBarLabel.Text = $"{Math.Round(zoom * 100)}%";
+        }
+        #endregion
+
+
     }
 }
