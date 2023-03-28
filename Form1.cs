@@ -264,5 +264,11 @@ namespace EditorTXT
             f.Show();
         }
         #endregion
+
+        // Barra Ferramentas - Novo
+        /*private void toolBarNovo_Click(object sender, EventArgs e)
+        {
+            mArquivoNovo_Click(sender, e);
+        }*/
     }
 }
