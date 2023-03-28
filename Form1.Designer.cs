@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             menuBar = new MenuStrip();
             mArquivo = new ToolStripMenuItem();
             mArquivoNovo = new ToolStripMenuItem();
@@ -86,53 +87,65 @@
             // 
             // mArquivoNovo
             // 
+            mArquivoNovo.Image = Properties.Resources.New;
             mArquivoNovo.Name = "mArquivoNovo";
-            mArquivoNovo.Size = new Size(171, 26);
+            mArquivoNovo.ShortcutKeys = Keys.Control | Keys.N;
+            mArquivoNovo.Size = new Size(272, 26);
             mArquivoNovo.Text = "Novo";
             mArquivoNovo.Click += mArquivoNovo_Click;
             // 
             // mArquivoNovaJanela
             // 
+            mArquivoNovaJanela.Image = Properties.Resources.Notes;
             mArquivoNovaJanela.Name = "mArquivoNovaJanela";
-            mArquivoNovaJanela.Size = new Size(171, 26);
+            mArquivoNovaJanela.ShortcutKeys = Keys.Control | Keys.Shift | Keys.N;
+            mArquivoNovaJanela.Size = new Size(272, 26);
             mArquivoNovaJanela.Text = "Nova Janela";
             mArquivoNovaJanela.Click += mArquivoNovaJanela_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(168, 6);
+            toolStripSeparator1.Size = new Size(269, 6);
             // 
             // mArquivoAbrir
             // 
+            mArquivoAbrir.Image = Properties.Resources.Folder;
             mArquivoAbrir.Name = "mArquivoAbrir";
-            mArquivoAbrir.Size = new Size(171, 26);
+            mArquivoAbrir.ShortcutKeys = Keys.Control | Keys.O;
+            mArquivoAbrir.Size = new Size(272, 26);
             mArquivoAbrir.Text = "Abrir";
             mArquivoAbrir.Click += mArquivoAbrir_Click;
             // 
             // mArquivoSalvar
             // 
+            mArquivoSalvar.Image = Properties.Resources.Save;
             mArquivoSalvar.Name = "mArquivoSalvar";
-            mArquivoSalvar.Size = new Size(171, 26);
+            mArquivoSalvar.ShortcutKeys = Keys.Control | Keys.S;
+            mArquivoSalvar.Size = new Size(272, 26);
             mArquivoSalvar.Text = "Salvar";
             mArquivoSalvar.Click += mArquivoSalvar_Click;
             // 
             // mArquivoSalvarComo
             // 
+            mArquivoSalvarComo.Image = Properties.Resources.Save;
             mArquivoSalvarComo.Name = "mArquivoSalvarComo";
-            mArquivoSalvarComo.Size = new Size(171, 26);
+            mArquivoSalvarComo.ShortcutKeys = Keys.Control | Keys.Shift | Keys.S;
+            mArquivoSalvarComo.Size = new Size(272, 26);
             mArquivoSalvarComo.Text = "Salvar Como";
             mArquivoSalvarComo.Click += mArquivoSalvarComo_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(168, 6);
+            toolStripSeparator2.Size = new Size(269, 6);
             // 
             // mArquivoSair
             // 
+            mArquivoSair.Image = Properties.Resources.Exit;
             mArquivoSair.Name = "mArquivoSair";
-            mArquivoSair.Size = new Size(171, 26);
+            mArquivoSair.ShortcutKeys = Keys.Alt | Keys.F4;
+            mArquivoSair.Size = new Size(272, 26);
             mArquivoSair.Text = "Sair";
             mArquivoSair.Click += mArquivoSair_Click;
             // 
@@ -146,59 +159,66 @@
             // mEditarDesfazer
             // 
             mEditarDesfazer.Name = "mEditarDesfazer";
-            mEditarDesfazer.Size = new Size(166, 26);
+            mEditarDesfazer.ShortcutKeys = Keys.Control | Keys.Z;
+            mEditarDesfazer.Size = new Size(236, 26);
             mEditarDesfazer.Text = "Desfazer";
             mEditarDesfazer.Click += mEditarDesfazer_Click;
             // 
             // mEditarRefazer
             // 
             mEditarRefazer.Name = "mEditarRefazer";
-            mEditarRefazer.Size = new Size(166, 26);
+            mEditarRefazer.ShortcutKeys = Keys.Control | Keys.Shift | Keys.Z;
+            mEditarRefazer.Size = new Size(236, 26);
             mEditarRefazer.Text = "Refazer";
             mEditarRefazer.Click += mEditarRefazer_Click;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(163, 6);
+            toolStripSeparator3.Size = new Size(233, 6);
             // 
             // mEditarRecortar
             // 
             mEditarRecortar.Name = "mEditarRecortar";
-            mEditarRecortar.Size = new Size(166, 26);
+            mEditarRecortar.ShortcutKeys = Keys.Control | Keys.X;
+            mEditarRecortar.Size = new Size(236, 26);
             mEditarRecortar.Text = "Recortar";
             mEditarRecortar.Click += mEditarRecortar_Click;
             // 
             // mEditarCopiar
             // 
             mEditarCopiar.Name = "mEditarCopiar";
-            mEditarCopiar.Size = new Size(166, 26);
+            mEditarCopiar.ShortcutKeys = Keys.Control | Keys.C;
+            mEditarCopiar.Size = new Size(236, 26);
             mEditarCopiar.Text = "Copiar";
             mEditarCopiar.Click += mEditarCopiar_Click;
             // 
             // mEditarColar
             // 
             mEditarColar.Name = "mEditarColar";
-            mEditarColar.Size = new Size(166, 26);
+            mEditarColar.ShortcutKeys = Keys.Control | Keys.V;
+            mEditarColar.Size = new Size(236, 26);
             mEditarColar.Text = "Colar";
             mEditarColar.Click += mEditarColar_Click;
             // 
             // mEditarExcluir
             // 
             mEditarExcluir.Name = "mEditarExcluir";
-            mEditarExcluir.Size = new Size(166, 26);
+            mEditarExcluir.ShortcutKeys = Keys.Delete;
+            mEditarExcluir.Size = new Size(236, 26);
             mEditarExcluir.Text = "Excluir";
             mEditarExcluir.Click += mEditarExcluir_Click;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(163, 6);
+            toolStripSeparator4.Size = new Size(233, 6);
             // 
             // mEditarDataHora
             // 
             mEditarDataHora.Name = "mEditarDataHora";
-            mEditarDataHora.Size = new Size(166, 26);
+            mEditarDataHora.ShortcutKeys = Keys.F5;
+            mEditarDataHora.Size = new Size(236, 26);
             mEditarDataHora.Text = "Data e Hora";
             mEditarDataHora.Click += mEditarDataHora_Click;
             // 
@@ -241,21 +261,26 @@
             // mExibirZoomAmpliar
             // 
             mExibirZoomAmpliar.Name = "mExibirZoomAmpliar";
-            mExibirZoomAmpliar.Size = new Size(149, 26);
+            mExibirZoomAmpliar.ShortcutKeyDisplayString = "Ctrl + sinal de adição";
+            mExibirZoomAmpliar.ShortcutKeys = Keys.Control | Keys.Oemplus;
+            mExibirZoomAmpliar.Size = new Size(321, 26);
             mExibirZoomAmpliar.Text = "Ampliar";
             mExibirZoomAmpliar.Click += mExibirZoomAmpliar_Click;
             // 
             // mExibirZoomReduzir
             // 
             mExibirZoomReduzir.Name = "mExibirZoomReduzir";
-            mExibirZoomReduzir.Size = new Size(149, 26);
+            mExibirZoomReduzir.ShortcutKeyDisplayString = "Ctrl + sinal de subtração";
+            mExibirZoomReduzir.ShortcutKeys = Keys.Control | Keys.OemMinus;
+            mExibirZoomReduzir.Size = new Size(321, 26);
             mExibirZoomReduzir.Text = "Reduzir";
             mExibirZoomReduzir.Click += mExibirZoomReduzir_Click;
             // 
             // mExibirZoomRestaurar
             // 
             mExibirZoomRestaurar.Name = "mExibirZoomRestaurar";
-            mExibirZoomRestaurar.Size = new Size(149, 26);
+            mExibirZoomRestaurar.ShortcutKeys = Keys.Control | Keys.D0;
+            mExibirZoomRestaurar.Size = new Size(321, 26);
             mExibirZoomRestaurar.Text = "Restaurar";
             mExibirZoomRestaurar.Click += mExibirZoomRestaurar_Click;
             // 
@@ -278,7 +303,9 @@
             // 
             // mAjudaExibirAjuda
             // 
+            mAjudaExibirAjuda.Image = Properties.Resources.Help1;
             mAjudaExibirAjuda.Name = "mAjudaExibirAjuda";
+            mAjudaExibirAjuda.ShortcutKeys = Keys.F1;
             mAjudaExibirAjuda.Size = new Size(214, 26);
             mAjudaExibirAjuda.Text = "Exibir Ajuda";
             mAjudaExibirAjuda.Click += mAjudaExibirAjuda_Click;
@@ -323,6 +350,7 @@
             Controls.Add(txtConteudo);
             Controls.Add(statusBar);
             Controls.Add(menuBar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuBar;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
